@@ -1,0 +1,52 @@
+# 小说创作写作契约
+
+version: 1.0
+domain: fiction
+
+purpose: >
+  指导创始人网络文学创作，从真实经验碎片到可发布的小说成稿。
+
+# ── 创作流程 ──────────────────────────────────────────
+
+workflow:
+  material:
+    title: 素材收集
+    description: 积累真实经验碎片和创作语境
+    path: material/
+
+  outline:
+    title: 大纲设计
+    description: 提取特质、确定核心、制造结构性矛盾
+    path: outline/
+
+  manuscript:
+    title: 稿件写作
+    description: 按大纲逐章写作
+    path: manuscript/
+
+  final:
+    title: 定稿
+    description: 审校、排版、发布准备
+    path: final/
+
+# ── 创作原则 ──────────────────────────────────────────
+
+principles:
+  - title: 一个核心
+    description: 只能有一个不可妥协的核心（如独立、硬沉）
+  - title: 结构性矛盾
+    description: 核心与行为的矛盾，提升矛盾层级转化为张力
+  - title: 重新定义而非解决
+    description: 不消除矛盾，而是重新定义它的层级
+  - title: 具体意象
+    description: 用具体意象命名特质（火花、写信、小铁碗）
+
+# ── Skills 定义 ──────────────────────────────────────────
+
+skills:
+  commit:
+    title: 规范提交
+    description: 使用 Conventional Commits 格式提交
+    commands:
+      - git add <files>
+      - git commit -m "<type>: <description>"
