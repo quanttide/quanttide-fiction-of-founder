@@ -1,0 +1,52 @@
+# MyST configuration for fiction docs
+version: 1
+project:
+  title: 量潮创始人网络文学
+  description: 量潮创始人网络文学创作
+  keywords:
+    - 量潮科技
+    - 网络文学
+    - 言情小说
+  authors:
+    - name: 量潮科技
+  github: https://github.com/quanttide/quanttide-founder
+  license: Proprietary
+  exclude:
+    - CHANGELOG.md
+    - ROADMAP.md
+    - .quanttide/**
+  toc:
+    - file: README.md
+    - title: 校园言情
+      children:
+        - file: 校园言情/README.md
+        - title: 素材
+          children:
+            - pattern: 校园言情/1_素材/*.md
+        - title: 提纲
+          children:
+            - pattern: 校园言情/2_提纲/*.md
+        - title: 初稿
+          children:
+            - pattern: 校园言情/3_初稿/*.md
+        - title: 成稿
+          children:
+            - pattern: 校园言情/4_成稿/*.md
+    - title: 职场言情
+      children:
+        - title: 样文
+          children:
+            - pattern: 职场言情/1_样文/*.md
+        - title: 提纲
+          children:
+            - pattern: 职场言情/2_提纲/*.md
+        - title: 初稿
+          children:
+            - pattern: 职场言情/3_初稿/*.md
+        - title: 成稿
+          children:
+            - pattern: 职场言情/4_成稿/*.md
+site:
+  template: book-theme
+  options:
+    folders: false
