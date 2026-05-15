@@ -2,8 +2,8 @@
 
 name: Deploy Fiction Docs
 on:
-  push:
-    branches: [main]
+  release:
+    types: [published]
 
 env:
   BASE_URL: /${{ github.event.repository.name }}
