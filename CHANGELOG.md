@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-05-15
+
+### Added
+
+- MyST 文档配置与 book-theme 站点
+- CI/CD 自动化工作流：发布时自动构建 HTML 部署到 GitHub Pages，并编译 PDF 上传到 Release
+- PDF 导出配置（plain_latex_book 模板 + xelatex 中文支持）
+
+### Changed
+
+- `.github/workflows/deploy.yml`: 新增 PDF 构建与上传步骤
+
 ## [0.2.0] - 2026-05-08
 
 ### Added
