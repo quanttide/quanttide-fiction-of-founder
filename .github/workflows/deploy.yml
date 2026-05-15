@@ -39,7 +39,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Install LaTeX (for PDF)
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq texlive-xetex fonts-noto-cjk
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq texlive-xetex texlive-latex-extra latexmk fonts-noto-cjk
       - name: Build PDF
         run: myst build --pdf
       - name: Upload PDF to Release
