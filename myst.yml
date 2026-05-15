@@ -15,6 +15,13 @@ project:
     - CHANGELOG.md
     - ROADMAP.md
     - .quanttide/**
+  exports:
+    - id: fiction-pdf
+      format: pdf
+      template: plain_latex_book
+      output: ./_build/exports/fiction.pdf
+      latex:
+        engine: xelatex
   toc:
     - file: README.md
     - title: 校园言情

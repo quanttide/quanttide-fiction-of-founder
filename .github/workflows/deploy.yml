@@ -2,14 +2,14 @@
 
 name: Deploy Fiction Docs
 on:
-  release:
-    types: [published]
+  push:
+    branches: [main]
 
 env:
   BASE_URL: /${{ github.event.repository.name }}
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -41,3 +41,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Install LaTeX (for PDF)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq texlive-xetex fonts-noto-cjk
+      - name: Build PDF
+        run: myst build --pdf
+      - name: Upload PDF as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fiction-pdf
+          path: _build/exports/*.pdf
