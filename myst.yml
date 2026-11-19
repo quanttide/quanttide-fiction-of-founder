@@ -49,7 +49,7 @@ project:
             - pattern: 职场言情/2_提纲/*.md
         - title: 初稿
           children:
-            - pattern: 职场言情/3_初稿/*.md
+            - pattern: 职场言情/2_初稿/*.md
         - title: 成稿
           children:
             - pattern: 职场言情/4_成稿/*.md
